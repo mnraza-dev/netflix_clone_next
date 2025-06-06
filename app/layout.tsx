@@ -25,9 +25,7 @@ export default function RootLayout({
         <body
           className={`${inter.className}  antialiased`}
         >
-          <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            {children}
-          </main>
+         {children}
         </body>
       </html>
     </ClerkProvider>
