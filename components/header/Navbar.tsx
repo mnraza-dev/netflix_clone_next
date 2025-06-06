@@ -6,8 +6,8 @@ import { UserButton } from '@clerk/nextjs'
 
 export default function Navbar() {
     return (
-        <header>
-            <nav className='flex space-x-2 md:space-x-10 items-center'>
+        <header className='flex justify-between items-center px-8'>
+            <div className='flex space-x-2 md:space-x-10 items-center'>
                 <Link
                     href={"/"}
                     className='text-lg text-white font-bold'>
@@ -39,19 +39,20 @@ export default function Navbar() {
                     </li>
 
                 </ul>
-                <div className='font-light justify-center items-center space-x-4 text-sm md:space-x-6'>
-                    <SearchIcon className='hidden h-6 w-6 md:inline' />
-                    <p className='hidden lg:inline'>Kids</p>
-                    <BellIcon className='h-6 w-6 cursor-pointer' />
-                    <Link href="/account">
-                        <div className='flex items-center space-x-2 gap-2'>
-                            <UserButton />
-                            <ChevronDown className='h-6 w-6 cursor-pointer' />
-                        </div>
-                    </Link>
-                </div>
+            </div>
+            <div className='font-light flex items-center space-x-4 text-sm md:space-x-6'>
+                <SearchIcon className='hidden h-6 w-6 md:inline' />
+                <p className='hidden lg:inline'>Kids</p>
+                <BellIcon className='h-6 w-6 cursor-pointer' />
+                <Link href="/account">
+                    <div className='flex items-center space-x-2 gap-2'>
+                        <UserButton />
+                        <ChevronDown className='h-6 w-6 cursor-pointer' />
+                    </div>
+                </Link>
+            </div>
 
-            </nav>
+
         </header>
     )
 }
