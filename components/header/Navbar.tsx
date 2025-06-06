@@ -3,10 +3,11 @@ import Link from 'next/link'
 import React from 'react'
 import { BellIcon, ChevronDown, SearchIcon, UserIcon } from 'lucide-react'
 import { UserButton } from '@clerk/nextjs'
+import MobileMenu from './mobile-menu'
 
 export default function Navbar() {
     return (
-        <header className='flex justify-between items-center px-8'>
+        <header className=' fixed top-0 z-50 w-full bg-black/70 flex justify-between items-center px-8 backdrop-blur-sm'>
             <div className='flex space-x-2 md:space-x-10 items-center'>
                 <Link
                     href={"/"}
@@ -21,6 +22,7 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 <div className="md:hidden">
                     {/* Hamburger Icon */}
+                    <MobileMenu />
                 </div>
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex space-x-4">
@@ -51,8 +53,6 @@ export default function Navbar() {
                     </div>
                 </Link>
             </div>
-
-
         </header>
     )
 }
