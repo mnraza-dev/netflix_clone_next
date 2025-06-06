@@ -4,8 +4,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
-    </main>
+      
+      <main>
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-4xl font-bold">Netflix Clone</h1>
+          <p className="text-lg">This is a Netflix Clone</p>
+        </div>
+      </main>
+    </div>
   );
 }
